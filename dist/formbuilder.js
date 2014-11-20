@@ -749,6 +749,16 @@
 }).call(this);
 
 (function() {
+  Formbuilder.registerField('phone', {
+    order: 35,
+    view: "<input type='text' />",
+    edit: "",
+    addButton: "<span class=\"symbol\"><span class=\"fa fa-phone\"></span></span> Phone"
+  });
+
+}).call(this);
+
+(function() {
   Formbuilder.registerField('price', {
     order: 45,
     view: "<div class='input-line'>\n  <span class='above-line'>$</span>\n  <span class='dolars'>\n    <input type='text' />\n    <label>Dollars</label>\n  </span>\n  <span class='above-line'>.</span>\n  <span class='cents'>\n    <input type='text' />\n    <label>Cents</label>\n  </span>\n</div>",
