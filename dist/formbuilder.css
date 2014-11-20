@@ -53,6 +53,8 @@
 .fb-common-wrapper .fb-label-description{margin-bottom:10px}
 .fb-common-wrapper .fb-label-description input,.fb-common-wrapper .fb-label-description textarea{width:100%}
 .fb-common-wrapper .fb-label-description textarea{min-height:5em}
+.fb-output{padding:0 10px 20px 10px}
+.fb-output-field{display:block;width:100%;height:150px}
 .response-field-draggable-helper{border:1px dashed #ddd;background:#eee}
 .response-field-text input.rf-size-small{width:130px}
 .response-field-text input.rf-size-medium{width:300px}
