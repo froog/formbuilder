@@ -77,6 +77,8 @@
       });
 
       fb.on('save', function(payload){
+        //remove fields wrapper from payload
+        var payload = JSON.stringify((JSON.parse(payload)).fields);
         $('.fb-output-field').html(payload);
         console.log(payload);
       })
