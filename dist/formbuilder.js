@@ -587,7 +587,8 @@
         MAX: 'field_options.max',
         MINLENGTH: 'field_options.minlength',
         MAXLENGTH: 'field_options.maxlength',
-        LENGTH_UNITS: 'field_options.min_max_length_units'
+        LENGTH_UNITS: 'field_options.min_max_length_units',
+        VALUE: 'field_options.value'
       },
       dict: {
         ALL_CHANGES_SAVED: 'All changes saved',
@@ -721,6 +722,16 @@
 
 (function() {
 
+
+}).call(this);
+
+(function() {
+  Formbuilder.registerField('hidden', {
+    order: 35,
+    view: "<input type='text' disabled value='<%= rf.get(Formbuilder.options.mappings.VALUE) %>' />",
+    edit: "<%= Formbuilder.templates['edit/value']() %>",
+    addButton: "<span class=\"symbol\"><span class=\"fa fa-eye-slash\"></span></span> Hidden"
+  });
 
 }).call(this);
 
@@ -1015,6 +1026,18 @@ var __t, __p = '', __e = _.escape;
 with (obj) {
 __p += '<div class=\'fb-edit-section-header\'>Units</div>\n<input type="text" data-rv-input="model.' +
 ((__t = ( Formbuilder.options.mappings.UNITS )) == null ? '' : __t) +
+'" />\n';
+
+}
+return __p
+};
+
+this["Formbuilder"]["templates"]["edit/value"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'fb-edit-section-header\'>Value</div>\n<input type="text" data-rv-input="model.' +
+((__t = ( Formbuilder.options.mappings.VALUE )) == null ? '' : __t) +
 '" />\n';
 
 }
